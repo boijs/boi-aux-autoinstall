@@ -1,0 +1,16 @@
+{
+  "name": "boi-plugin-aux-autoinstall",
+  "version": "0.0.1",
+  "description": "auto install node modules ",
+  "main": "index.js",
+  "keywords": [
+    "boi"
+  ],
+  "author": "zhoujunpeng",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "chalk": "^1.1.3",
+    "shelljs": "^0.7.3"
+  }
+}
