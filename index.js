@@ -20,10 +20,11 @@ const DEFAULT_OPTIONS = {
 
 // npm淘宝镜像
 const NPM_REGISTRY = 'https://registry.npm.taobao.org';
-// 检测cnpm是否可用
-const CNPM_AVALIABLE = !isNaN(parseInt(exec('cnpm -v')));
 
 module.exports = function(options) {
+  // 检测cnpm是否可用
+  const CNPM_AVALIABLE = !isNaN(parseInt(exec('cnpm -v')));
+  
   let _options = options || Object.assign({}, DEFAULT_OPTIONS);
   Promise.try(() => {
     let _modulesNeedChecked = [];
