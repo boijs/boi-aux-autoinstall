@@ -26,7 +26,7 @@ module.exports = function (options) {
   let _options = options || Object.assign({}, DEFAULT_OPTIONS);
   Promise.try(() => {
     let _modulesNeedChecked = [];
-    spinner = Ora(Chalk.cyan.bold('Checking dependencies...')).start();
+    spinner = Ora(Chalk.cyan.bold('Checking dependencies...\n')).start();
     // 储存指定的modules
     if (_options.modules && _options.modules.length !== 0) {
       _modulesNeedChecked = _modulesNeedChecked.concat(_options.modules);
@@ -70,7 +70,7 @@ module.exports = function (options) {
         });
       }
     }
-    spinner.succeed(Chalk.cyan.bold('All dependencies have been installed'));
+    spinner.succeed(Chalk.cyan.bold('All dependencies have been installed\n'));
   }).catch((err) => {
     spinner.fail(Chalk.red(err.stack));
     process.exit(1);
