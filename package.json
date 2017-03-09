@@ -1,6 +1,6 @@
 {
   "name": "boi-aux-autoinstall",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "auto install node modules ",
   "main": "index.js",
   "keywords": [
