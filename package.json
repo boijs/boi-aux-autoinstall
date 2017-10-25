@@ -1,6 +1,6 @@
 {
   "name": "boi-aux-autoinstall",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a tool used to install dependencies",
   "main": "index.js",
   "scripts": {
@@ -12,7 +12,7 @@
   "author": "zhoujunpeng <zjp0432@163.com> (https://github.com/zhoujunpeng)",
   "license": "MIT",
   "dependencies": {
-    "boi-utils": "0.0.1",
+    "boi-utils": "0.0.2",
     "shelljs": "^0.7.3"
   }
 }
