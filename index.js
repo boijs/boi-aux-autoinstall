@@ -21,12 +21,11 @@ module.exports = function (options) {
   // 检测cnpm是否可用
   const CNPM_AVALIABLE = !!(exec('cnpm -v',{silent:true}).stdout);
 
-  let spinner = null;
+  let spinner = Ora(Chalk.cyan.bold('Checking dependencies...')).start();;
 
   let _options = options || Object.assign({}, DEFAULT_OPTIONS);
   Promise.try(() => {
     let _modulesNeedChecked = [];
-    spinner = Ora(Chalk.cyan.bold('Checking dependencies...\n')).start();
     // 储存指定的modules
     if (_options.modules && _options.modules.length !== 0) {
       _modulesNeedChecked = _modulesNeedChecked.concat(_options.modules);
@@ -38,7 +37,7 @@ module.exports = function (options) {
     if (modules && modules.length !== 0) {
       modules.forEach(function (module) {
         try {
-          require.resolve(module);
+          require.resolve(module.split('@')[0]);
         } catch (e) {
           _modulesNeedInstalled.push(module);
         }
@@ -61,11 +60,11 @@ module.exports = function (options) {
     // 安装package.json未收集的依赖包
     if (modules && modules.length !== 0) {
       if (CNPM_AVALIABLE) {
-        exec('cnpm install ' + modules.join(' ') + ' --save-dev', {
+        exec(`cnpm install ${modules.join(' ')} --save-dev`, {
           silent: true
         });
       } else {
-        exec('npm install ' + modules.join(' ') + ' --save-dev --registry=' + NPM_REGISTRY, {
+        exec(`npm install ${modules.join(' ')} --save-dev --registry=${NPM_REGISTRY}`, {
           silent: true
         });
       }
