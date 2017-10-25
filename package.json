@@ -3,16 +3,16 @@
   "version": "0.2.0",
   "description": "auto install node modules ",
   "main": "index.js",
+  "scripts": {
+    "lint": "eslint index.js"
+  },
   "keywords": [
     "boi"
   ],
   "author": "zhoujunpeng",
   "license": "ISC",
   "dependencies": {
-    "bluebird": "^3.4.1",
-    "chalk": "^1.1.3",
-    "lodash": "^4.15.0",
-    "ora": "^1.1.0",
+    "boi-utils": "0.0.1",
     "shelljs": "^0.7.3"
   }
 }
