@@ -1,7 +1,7 @@
 {
   "name": "boi-aux-autoinstall",
-  "version": "0.2.0",
-  "description": "auto install node modules ",
+  "version": "1.0.0",
+  "description": "a tool used to install dependencies",
   "main": "index.js",
   "scripts": {
     "lint": "eslint index.js"
@@ -9,8 +9,8 @@
   "keywords": [
     "boi"
   ],
-  "author": "zhoujunpeng",
-  "license": "ISC",
+  "author": "zhoujunpeng <zjp0432@163.com> (https://github.com/zhoujunpeng)",
+  "license": "MIT",
   "dependencies": {
     "boi-utils": "0.0.1",
     "shelljs": "^0.7.3"
