@@ -16,7 +16,7 @@
   "author": "zhoujunpeng <zjp0432@163.com> (https://github.com/zhoujunpeng)",
   "license": "MIT",
   "dependencies": {
-    "boi-utils": "0.0.2",
+    "boi-utils": "^0.0.3",
     "shelljs": "^0.7.3"
   }
 }
