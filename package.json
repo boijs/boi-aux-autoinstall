@@ -1,7 +1,7 @@
 {
   "name": "boi-aux-autoinstall",
-  "version": "1.0.1",
-  "description": "a tool used to install dependencies",
+  "version": "1.0.2",
+  "description": "install dependencies for boi project",
   "main": "index.js",
   "scripts": {
     "lint": "eslint index.js"
@@ -9,6 +9,10 @@
   "keywords": [
     "boi"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:boijs/boi-aux-autoinstall.git"
+  },
   "author": "zhoujunpeng <zjp0432@163.com> (https://github.com/zhoujunpeng)",
   "license": "MIT",
   "dependencies": {
